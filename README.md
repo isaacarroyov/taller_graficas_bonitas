@@ -1,4 +1,4 @@
-# Taller: Gráficas bonitas con R
+# Taller: Gráficas bonitas
 
 ## Descripción
 La visualización de datos puede tener diferentes definiciones dependiendo de a quién se le pregunte. En este taller nos guiaremos de la siguiente: La representación y presentación de los datos para su fácil entendimiento.
