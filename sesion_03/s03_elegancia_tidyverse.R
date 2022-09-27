@@ -3,7 +3,6 @@
 
 
 # ------ CARGAR LOS BIBLIOTECAS/PAQUETERIAS ------
-# install.packages("tidyverse")
 # library(tidyverse)
 library(dplyr)
 library(tidyr)
@@ -12,90 +11,114 @@ library(stringr)
 library(lubridate)
 
 # ------ CARGAR LOS DATOS INICIALES------
-
-# ------ CONOCER EL DATAFRAME O TIBBLE ------
-# Nombre de columnas
-# Tipo de datos
+data_nyt_bestsellers <- read_csv("https://raw.githubusercontent.com/isaacarroyov/taller_graficas_bonitas/main/data/nyt_bestsellers-clean.csv")
 
 
-# ------ SELECCIONAR VARIABLES/COLUMNAS DE INTERES ------
+# ------ CONOCER DATA.FRAME O TIBBLE ------
 
 
-
-# ------ MUTATE ------
-# Crear una columna de precio en pesos mexicanos
-# Separar nombre y apellido de author
+# ------ dplyr::select ➡️ Seleccionar columnas/variables ------
 
 
-# ------ MUTATE + CASE_WHEN ------
-# Crear una variable donde se vayan clasificando los precios de los libros 
-# 1 -> barato; 2 -> no tan barato;  3-> a caso vuela o que pedo?
+# ------ Seleccionar author, title y price.numberDouble ------
 
 
-# ------ RENAME ------
-# Cambiar el nombres de columnas de ingles a espanol 
-# a nombres mas cortos y claros
+# ------ Ejercicio con dplyr::select ------
 
 
-# ------ FILTER ------
-# Filtrar por mayo numero de semanas en el ranking (arriba de 14 semanas)
+# ------ dplyr::mutate ➡️ Crear nuevas columnas ------
 
 
-# Por authores
+# ------ Crear columna que tome en cuenta la inflación ------
 
 
-# Por palabras clave en las descripciones 
-
-# Palabra clave y ranking semanal
+# ------ Crear columna que tome en cuenta la inflación ------
 
 
-
-# Usaremos los datos de moratlidad infantil
-# ------ SUMMARISE ------
-# Calcular la media y desviacion estandar de algunas columnas 
+# ------ Ejercicio con dplyr::mutate ------
 
 
-
-# ------ GROUP_BY ------
-# Calcular la media y desviacion estandar de los diferentes continentes
+# ------ tidyr::separate ➡️ Generar columnas de información de texto ------
 
 
-# Ver el cambio porcentual de cada continente con respecto al año pasado 
+# ------ Separar nombre y apellido de la columna author ------
 
 
-
-# ------ LUBRIDATE ------
-
-
-# ------ MUTATE (fechas) ------
+# ------ dplyr::case_when ➡️ Crear nueva columna de acuerdo a condiciones ------
 
 
-# ------ GROUP_BY (categorias y fechas) ------
+# ------ Clasificar precios de libros ------
 
 
-
-# ------ PIVOT_LONGER y PIVOT_WIDER ------
-# Wider -> Longer
+# ------ dplyr::rename ➡️ Renombrar columnas ------
 
 
-# Longer -> Wider
+# ------ Cambio a nombres más claros ------
 
 
-
-# ------ BIND_ROWS, BIND_COLS ------
-# bind_rows -> no importa que no hagan match las columnas
+# ------ dplyr::filter ➡️ Filtrar de acuerdo a condiciones ------
 
 
-
-# bind_rows -> no importa que no hagan match las columnas
-
-
-# bind_cols -> importa que el numero de filas sea el mismo
+# ------ Libros con más de 14 semanas en la lista del ranking ------
 
 
-# ------ JOINT ------
+# ------ Filtrar por apellidos ------
 
 
+# ------ Por palabras clave en las descripciones ------
 
 
+# ------ Por palabras clave y ranking semanal ------
 
+
+# ------ Cambio de dataset ------
+data_mortality_infants <- read_csv("https://raw.githubusercontent.com/isaacarroyov/data_visualization_practice/master/data/causes-of-death-in-children-under-5.csv")
+
+# ------ Ejercicio: Preparación de los datos ------
+
+
+# ------ dplyr::summarise ➡️ Resumir información de columnas ------
+
+
+# ------ Obtener las estadísticas básicas del conjuntos de datos ------
+
+
+# ------ dplyr::group_by ➡️ Agrupar por categorías ------
+
+
+# ------ Cambio o diferencia de fallecimientos con respecto al año anterior en cada uno de los continentes ------
+
+
+# ------ Ejercicio con `dplyr::group_by` y `dplyr::summarise` ➡️ media y desviación estándar de `df_mi` por continente ------
+
+
+# ------ dplyr::lubridate ➡️ manejo de fechas ------
+data_vuelos_tt <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-07-12/flights.csv")
+glimpse(data_vuelos_tt)
+
+# ------ Seleccionar y renombrar columnas ------
+
+
+# ------ Formato e información de fechas con ymd(), year(), month(), entre otras ------
+
+
+# ------ lubridate + dplyr::mutate ------
+
+
+# ------ Agrupar y resumir los vuelos del mes por cada país (1a manera) ------
+
+
+# ------ lubridate::floor_date() ➡️ Agrupar y resumir los vuelos del mes por cada país (2a manera) ------
+
+
+# ------ Ejemplo de wide format: Cargamos más datos ------
+data_motomami <- read_csv("https://raw.githubusercontent.com/isaacarroyov/30DayChartChallenge/main/2022/data/ROSALIA_MOTOMAMI_Audio_Features.csv")
+data_motomami
+
+# ------ Ejemplo de long format: Datos mensuales del número de los vuelos de un país de Europa (Italia) df_flies ------
+
+
+# ------ tidyr::pivot_longer ➡️ De wide a long format (Ejemplo) ------
+
+
+# ------ tidyr::pivot_wider ➡️ De long a wide format (Ejemplo) ------
