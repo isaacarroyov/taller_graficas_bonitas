@@ -17,8 +17,8 @@ Cada sesión o clase tiene un nombre. Además cada una tiene un emoji como códi
 - 📝 → Una clase donde la teoría es lo principal y fundamental. Se verá también programación, pero no se enfocará ahí el esfuerzo.
 
 1. ☕ Bienvenida
-2. 💻 Conociendo a R y RStudio
-3. 💻 La elegancia de `tidyverse`
+2. [💻 Conociendo a R y RStudio](https://github.com/isaacarroyov/taller_graficas_bonitas/tree/main/sesion_02)
+3. [💻 La elegancia de `tidyverse`](https://github.com/isaacarroyov/taller_graficas_bonitas/tree/main/sesion_03)
 4. 💻 Gramática de Gráficas
 5. 📝 Glamour de Gráficas (Parte 1): Diseño y tipografía
 6. 📝 Glamour de Gráficas (Parte 2): Teoría del color
