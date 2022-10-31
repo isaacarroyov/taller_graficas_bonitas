@@ -3,6 +3,7 @@
 # ------ Cargar librerías ------
 
 # ------ Cargar y conocer los datos ------
+artistas_usa <- read_csv("https://raw.githubusercontent.com/isaacarroyov/taller_graficas_bonitas/main/practica_pre_dataviz/data/artists.csv")
 
 # Ver las primeras 5 filas
 
